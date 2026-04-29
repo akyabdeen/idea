@@ -19,7 +19,7 @@ class Idea extends Model
         "status" => IdeaStatus::class
     ];
     protected $attributes = [
-        "status" => IdeaStatus::PENDING,
+        "status" => IdeaStatus::PENDING->value,
     ];
 
     public function user(): BelongsTo

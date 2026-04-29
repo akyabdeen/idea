@@ -4,9 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
-class UpdateIdeaRequest extends FormRequest
+class StoreUserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +23,7 @@ class UpdateIdeaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'min:3'],
-            'email' => ['required', 'min:3', 'max:255', Rule::unique('users', 'email')],
-            'password' => ['required', 'min:3', 'regex:^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$'],
+            //
         ];
     }
 }
